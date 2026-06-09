@@ -66,8 +66,10 @@ const server = http.createServer((req,res)=>{
 <p>Uygulama; oyun ilerlemen, altın, istatistikler ve ayarları yalnızca <b>cihazında</b> (yerel depolama) saklar. Hesap açman gerekmez.</p>
 <h2>Liderlik</h2>
 <p>Liderliğe katıldığında yalnızca seçtiğin <b>takma ad</b>, <b>oyun puanın</b> ve rastgele oluşturulmuş anonim bir <b>cihaz kimliği</b> sunucumuza gönderilir. Ad, e-posta, konum, rehber gibi kişisel/hassas bilgiler toplanmaz.</p>
+<h2>Reklamlar</h2>
+<p>Uygulama, Google AdMob aracılığıyla reklam gösterebilir. AdMob; reklam sunmak ve ölçmek için reklam kimliği (advertising ID) gibi tanımlayıcıları işleyebilir. Google'ın bu verileri nasıl kullandığı: policies.google.com/technologies/partner-sites.</p>
 <h2>Üçüncü taraflar</h2>
-<p>Veriler üçüncü taraflarla paylaşılmaz, satılmaz. Reklam ve takip teknolojisi kullanılmaz.</p>
+<p>Oyun ilerlemen satılmaz. Reklam hizmeti için Google AdMob, liderlik için kendi sunucumuz kullanılır.</p>
 <h2>Çocuklar</h2>
 <p>Uygulama her yaşa uygundur ve çocuklardan bilerek kişisel veri toplamaz.</p>
 <h2>Veri silme</h2>
