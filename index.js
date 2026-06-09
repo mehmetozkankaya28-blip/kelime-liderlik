@@ -78,6 +78,8 @@ const server = http.createServer((req,res)=>{
 <p>Sorular için: <i>(buraya kendi e-posta adresini yaz)</i></p>
 </body></html>`);
   }
+  if(u.pathname==='/app-ads.txt'){ cors(res); res.writeHead(200,{'Content-Type':'text/plain; charset=utf-8'});
+    return res.end('google.com, pub-3669906849500405, DIRECT, f08c47fec0942fa0\n'); }
   if(u.pathname==='/' || u.pathname==='/health') return json(res,200,{ok:true,service:'kelime-liderlik'});
   json(res,404,{error:'bulunamadı'});
 });
