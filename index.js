@@ -56,6 +56,26 @@ const server = http.createServer((req,res)=>{
     return;
   }
 
+  if(u.pathname==='/gizlilik' || u.pathname==='/privacy'){
+    cors(res); res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});
+    return res.end(`<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gizlilik Politikası — Kelime Oyunları</title>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 18px;line-height:1.6;color:#222}h1{color:#16213e}h2{margin-top:26px}</style></head><body>
+<h1>Gizlilik Politikası — Kelime Oyunları</h1>
+<p>Son güncelleme: 2026. Bu politika "Kelime Oyunları" uygulamasının kişisel verileri nasıl işlediğini açıklar.</p>
+<h2>Toplanan veriler</h2>
+<p>Uygulama; oyun ilerlemen, altın, istatistikler ve ayarları yalnızca <b>cihazında</b> (yerel depolama) saklar. Hesap açman gerekmez.</p>
+<h2>Liderlik</h2>
+<p>Liderliğe katıldığında yalnızca seçtiğin <b>takma ad</b>, <b>oyun puanın</b> ve rastgele oluşturulmuş anonim bir <b>cihaz kimliği</b> sunucumuza gönderilir. Ad, e-posta, konum, rehber gibi kişisel/hassas bilgiler toplanmaz.</p>
+<h2>Üçüncü taraflar</h2>
+<p>Veriler üçüncü taraflarla paylaşılmaz, satılmaz. Reklam ve takip teknolojisi kullanılmaz.</p>
+<h2>Çocuklar</h2>
+<p>Uygulama her yaşa uygundur ve çocuklardan bilerek kişisel veri toplamaz.</p>
+<h2>Veri silme</h2>
+<p>Uygulama içinden <i>Ayarlar → İlerlemeyi Sıfırla</i> ile tüm yerel verini silebilirsin. Liderlik kaydının silinmesi için bu sayfadaki iletişim adresinden talepte bulunabilirsin.</p>
+<h2>İletişim</h2>
+<p>Sorular için: <i>(buraya kendi e-posta adresini yaz)</i></p>
+</body></html>`);
+  }
   if(u.pathname==='/' || u.pathname==='/health') return json(res,200,{ok:true,service:'kelime-liderlik'});
   json(res,404,{error:'bulunamadı'});
 });
